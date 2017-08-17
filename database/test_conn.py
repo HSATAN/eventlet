@@ -1,5 +1,6 @@
 # coding=utf8
 from twisted.internet import reactor
+from eventlet.twistedutil import block_on
 from twisted.enterprise import adbapi
 SQLDB_DSN_MASTER = {
     'w': 'dbname=peiwo user=huangkaijie password=raybo host=localhost',
@@ -8,7 +9,7 @@ SQLDB_DSN_MASTER = {
 dbpool=adbapi.ConnectionPool('psycopg2',SQLDB_DSN_MASTER['w'])
 
 def getName(email):
-    return dbpool.runQuery("SELECT * FROM test")
+    return ( dbpool.runQuery("SELECT * FROM test WHERE name='huangkaijie'"))
 
 def printResult(result):
     print result
