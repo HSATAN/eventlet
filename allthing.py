@@ -1,11 +1,17 @@
 # coding=utf8
-def test(**kwargs):
-    conditions = []
-    print type(kwargs)
-    print kwargs.iteritems()
-    for field,value in kwargs.iteritems():
-        print field,value
-        conditions.append('%s=%%s'%field)
-    print conditions
+from datetime import datetime,timedelta
 
-test(name='huangkaijie', age=10)
+from collections import defaultdict
+class hkj(object):
+
+    def __init__(self):
+        self._test="huangkaijie"
+
+class child(hkj):
+
+    def ppp(self):
+        self.__dict__
+
+ins = child()
+ins.ppp()
+print ins._test
