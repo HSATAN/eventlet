@@ -2,6 +2,7 @@
 
 import requests
 url='https://debugapi.raybo.com:2443/v1.0/qixi_activity/userstate'
+#url = 'https://debugapi.raybo.com:2443/admin/account/userstate'
 
 parameter={
 'uid':992,
