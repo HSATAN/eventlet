@@ -25,15 +25,29 @@ class busypage(Resource):
 
 class child(Resource):
 
-
+    get_count = 0
+    post_count = 0
     def __init__(self):
+
         Resource.__init__(self)
         self.putChild('node', child_child())
 
     def render_GET(self, request):
 
+        time.sleep(0.1)
+        self.get_count += 1
+        print 'get      ', self.get_count
+        print request.args
         # request.write("我是子路径         ---")
-        return {"woshihuangkaijie"}
+        return bytes({"woshihuangkaijie"})
+    def render_POST(self,request):
+
+        self.post_count += 1
+        print 'post    ',self.post_count
+
+        print request.args.get('username',0)[0]
+        time.sleep(0.1)
+        return bytes(b"你发的是post请求")
 
 
 class child_child(Resource):
