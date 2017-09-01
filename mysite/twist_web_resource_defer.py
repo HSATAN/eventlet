@@ -11,7 +11,7 @@ class busypage(Resource):
     def __init__(self):
         Resource.__init__(self)
         self.putChild('child',child())
-        self.putChild('',NoResource())
+        self.putChild('wetest-73de419b25189dfe28a9ab524f9d618b.txt',yanzheng())
 
     def _delayedRender(self, request):
         request.write("finally done , at %s"%time.asctime())
@@ -22,6 +22,14 @@ class busypage(Resource):
         d.addCallback(self._delayedRender)
         return NOT_DONE_YET
 
+class yanzheng(Resource):
+    get_count = 0
+    post_count = 0
+    isLeaf = True
+    def __init__(self):
+        Resource.__init__(self)
+    def render_GET(self, request):
+        return bytes("wetest-73de419b25189dfe28a9ab524f9d618b")
 
 class child(Resource):
 
@@ -45,8 +53,7 @@ class child(Resource):
         self.post_count += 1
         print 'post    ',self.post_count
 
-        print request.args.get('username',0)[0]
-        time.sleep(0.1)
+        print request.args.get('username',0)
         return bytes(b"你发的是post请求")
 
 
