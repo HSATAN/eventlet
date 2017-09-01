@@ -55,6 +55,7 @@ class child_child(Resource):
     isLeaf = True
     def render_GET(self, request):
         return bytes("黄开杰")
+if __name__ == '__main__':
 
-reactor.listenTCP(9999,Site(busypage()))
-reactor.run()
+    reactor.listenTCP(9999,Site(busypage()))
+    reactor.run()
