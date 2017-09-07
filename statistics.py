@@ -4,14 +4,17 @@ import time
 
 host = '172.16.10.130'
 port = 22000
-
+"""
+陪我测试mongo
+"""
 
 class Statistics():
 
     def __init__(self,port=22000, host='172.16.10.130'):
         self.clint = MongoClient(host, port)
         self.db = self.clint.sneaky
-        self.collection = self.db.pw_live_room
+        #  self.collection = self.db.pw_live_room
+        self.collection =self.db.pw_live_guest
 
     def statistics(self, start_time, end_time):
 
@@ -60,4 +63,7 @@ class Statistics():
 #
 
 ins =Statistics()
-ins.statistics('2017-08-28 00:00:00', '2017-08-28 21:00:00')
+#ins.statistics('2017-08-28 00:00:00', '2017-08-28 21:00:00')
+data = ins.collection.find({'uid':82905523})
+for item in data:
+    print item
