@@ -1,10 +1,10 @@
-#codin=utf8
+#coding=utf8
 from twisted.internet import reactor
 from twisted.web import http
 class MyRequestHandler(http.Request):
 
      resourse={
-        '/': '<h1>Home</h1>Home page',
+        '/': '<h1>Home</h1>fffffffffffffff page',
         '/about': '<h1>About</h1>All about me',
         }
      def process(self):

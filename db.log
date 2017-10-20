@@ -1,0 +1,16 @@
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 172.16.10.134
+DEBUG:urllib3.connectionpool:http://172.16.10.134:9090 "GET /admin/live/live_room_statistics HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 172.16.10.134
+DEBUG:urllib3.connectionpool:http://172.16.10.134:9090 "GET /admin/live/live_room_statistics?desc=1 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 172.16.10.134
+DEBUG:urllib3.connectionpool:http://172.16.10.134:9090 "GET /admin/live/live_room_statistics?desc=1 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 172.16.10.134
+DEBUG:urllib3.connectionpool:http://172.16.10.134:9090 "GET /admin/live/live_room_statistics?desc=1 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 172.16.10.134
+DEBUG:urllib3.connectionpool:http://172.16.10.134:9090 "GET /admin/live/live_room_statistics?desc=1 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 172.16.10.134
+DEBUG:urllib3.connectionpool:http://172.16.10.134:9090 "GET /admin/live/live_room_statistics?desc=1 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 172.16.10.134
+DEBUG:urllib3.connectionpool:http://172.16.10.134:9090 "GET /admin/live/live_room_statistics?desc=1 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 172.16.10.134
+DEBUG:urllib3.connectionpool:http://172.16.10.134:9090 "GET /admin/live/live_room_statistics?desc=1 HTTP/1.1" 200 None
